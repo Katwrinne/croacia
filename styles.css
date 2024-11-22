@@ -1,47 +1,78 @@
+/* Estilo global */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #0077b6, #90e0ef);
+    color: white;
+    min-height: 100vh;
 }
 
-header {
-    background: #0077b6;
-    color: white;
-    padding: 1.5em 0;
+/* Efecto de vidrio */
+.glass-header, .glass-section, .glass-footer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1.5em;
+    margin: 1.5em;
     text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
 }
 
 header nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    padding: 0;
+    margin: 1em 0;
+    gap: 15px;
 }
 
 header nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    transition: background 0.3s ease;
 }
 
-.section {
-    padding: 2em;
-    text-align: center;
+header nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 
-.section img {
+/* Secciones */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 1em;
+}
+
+.glass-section img {
     max-width: 100%;
     height: auto;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
+/* Pie de página */
 footer {
-    background: #005f73;
-    color: white;
     text-align: center;
+    font-size: 0.9em;
+    background: rgba(0, 0, 0, 0.4);
     padding: 1em 0;
-    margin-top: 2em;
 }
