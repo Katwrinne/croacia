@@ -4,10 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descubre Croacia</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo global */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0077b6, #90e0ef);
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        /* Efecto de vidrio */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 2em;
+            margin: 2em auto;
+            text-align: center;
+            max-width: 800px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Encabezado */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 1em 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* Secciones */
+        section {
+            padding: 2em 1em;
+        }
+
+        section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 1em;
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 1em;
+            background: rgba(0, 0, 0, 0.6);
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-    <header class="glass-header">
+    <header>
         <h1>Descubre Croacia</h1>
         <nav>
             <ul>
@@ -19,17 +104,17 @@
         </nav>
     </header>
 
-    <main class="main-container">
-        <section id="historia" class="glass-section">
+    <main>
+        <section id="historia" class="glass">
             <h2>Historia de Croacia</h2>
             <p>
                 Croacia tiene una rica historia que se remonta a la época romana. Desde su independencia en 1991, 
                 ha florecido como un destino turístico y cultural en Europa.
             </p>
-            <img src="historia.jpg" alt="Historia de Croacia">
+            <img src="croacia.png" alt="Historia de Croacia">
         </section>
 
-        <section id="cultura" class="glass-section">
+        <section id="cultura" class="glass">
             <h2>Cultura y Tradiciones</h2>
             <p>
                 La cultura croata es una mezcla de influencias eslavas, mediterráneas y centroeuropeas, reflejada en sus festivales y artes.
@@ -37,7 +122,7 @@
             <img src="cultura.jpg" alt="Cultura croata">
         </section>
 
-        <section id="turismo" class="glass-section">
+        <section id="turismo" class="glass">
             <h2>Turismo en Croacia</h2>
             <p>
                 Con playas del Adriático, islas paradisíacas y sitios históricos como Dubrovnik, Croacia es un paraíso para los viajeros.
@@ -45,7 +130,7 @@
             <img src="turismo.jpg" alt="Turismo en Croacia">
         </section>
 
-        <section id="gastronomia" class="glass-section">
+        <section id="gastronomia" class="glass">
             <h2>Gastronomía</h2>
             <p>
                 Deliciosos platos mediterráneos como el estofado de carne *pasticada* y vinos locales hacen de Croacia un destino culinario único.
@@ -54,7 +139,7 @@
         </section>
     </main>
 
-    <footer class="glass-footer">
+    <footer>
         <p>&copy; 2024 Descubre Croacia. Todos los derechos reservados.</p>
     </footer>
 </body>
